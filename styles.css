@@ -15,7 +15,7 @@ h1 {
     flex-wrap: wrap;
 }
 .item {
-    width: calc(50% - 10px); /* 每個項目占二分之一的寬度，加上間距 */
+    width: calc(100% - 10px); /* 每個項目占一分之一的寬度，加上間距 */
     margin: 5px;
     box-sizing: border-box;
     border: 1px solid #ccc; /* 加上邊框以示區分 */
