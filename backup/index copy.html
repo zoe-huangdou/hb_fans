@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資訊收集</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1>資訊收集</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>圖片</th>
+                <th>作者</th>
+                <th>說明文字</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://via.placeholder.com/100" alt="圖片1" onclick="toggleDetails(this)"></td>
+                <td class="author">作者1</td>
+                <td class="description">這是說明文字1</td>
+                <td class="details"></td>
+            </tr>
+            <tr>
+                <td><img src="https://via.placeholder.com/100" alt="圖片2" onclick="toggleDetails(this)"></td>
+                <td class="author">作者2</td>
+                <td class="description">這是說明文字2</td>
+                <td class="details"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function toggleDetails(img) {
+            var row = img.parentElement.parentElement;
+            var details = row.querySelector('.details');
+            if (details.style.display === "none") {
+                details.innerHTML = "<strong>作者:</strong> " + row.querySelector('.author').innerText + "<br><strong>說明:</strong> " + row.querySelector('.description').innerText;
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
