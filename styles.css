@@ -36,3 +36,35 @@ img {
     font-size: 20px; 
     margin: 10px;
 }
+
+.img-group {
+    display: flex; 
+    align-items: center; 
+    width: 100%;
+}
+
+.img-left {
+    z-index: 10000;
+    text-align: left; 
+    width: 50%;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* margin: 20px; */
+    /* background-color: lightblue; */
+    /* padding: 10px; */
+}
+
+.img-right {
+    z-index: 10000;
+    text-align: right; 
+    width: 50%;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    /* margin: 20px; */
+    /* background-color: lightgreen; */
+    /* padding: 10px; */
+}
