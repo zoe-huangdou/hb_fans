@@ -11,17 +11,17 @@ fetch('data.json')
 
         const container = document.getElementById('table-body');
 
-        data.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'item';
-            div.innerHTML = `
-                <a href="${item.url}" target="_blank"><img src="${item.imgurl}" alt="${item.title}" style="width: 200px; height: auto;"></a>
-                <h3>${item.title}</h3>
-                <p>主辦人: ${item.host}</p>
-            `;
+        // data.forEach(item => {
+        //     const div = document.createElement('div');
+        //     div.className = 'item';
+        //     div.innerHTML = `
+        //         <a href="${item.url}" target="_blank"><img src="${item.imgurl}" alt="${item.title}" style="width: 200px; height: auto;"></a>
+        //         <h3>${item.title}</h3>
+        //         <p>主辦人: ${item.host}</p>
+        //     `;
 
-            container.appendChild(div);
-        });
+        //     container.appendChild(div);
+        // });
     })
     .catch(error => {
         console.error('讀取檔案失敗:', error);
