@@ -21,7 +21,7 @@ body {
     text-align: center;
     color: #fff;
     margin: 0;
-    padding: 8px;
+    padding: 8px 0;
 }
 
 .footer {
@@ -43,6 +43,7 @@ body {
 .container {
     justify-content: center;
     margin-top: 70px;
+    padding-bottom: 80px;
     display: flex;
     flex-wrap: wrap;
 }
