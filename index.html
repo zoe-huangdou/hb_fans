@@ -8,7 +8,9 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>黃氏兄弟應援資訊</h1>
+    <div class="header">
+        <h1>黃氏兄弟應援資訊</h1>
+    </div>
     <div class="img-group">
         <div class="img-left">
             <img src="img/zhe.png" alt="zhe">
@@ -86,11 +88,30 @@
         </div>
 
 
-
-
-        
-        
-        <!-- 這裡會動態添加項目 -->
     </div>
+
+    <!-- 回到最上方按鈕 -->
+    <div id="back-to-top" onclick="scrollToTop()">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 20 70 L 50 40 L 80 70" fill="none" stroke="#ffffff" stroke-width="20"/>
+          </svg>
+    </div>
+
+    <script>
+        // 監聽滾動事件，當頁面向下滾動時顯示按鈕
+        window.onscroll = function() {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        };
+
+        // 點擊按鈕時，滑動回到頂部
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>

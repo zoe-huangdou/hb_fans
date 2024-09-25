@@ -3,14 +3,27 @@ body {
     background-color: #fffbe6;
     color: #333;
     margin: 0;
-    padding: 20px;
+    /* padding: 20px; */
 }
+
+.header {
+    z-index: 10000;
+    background-color: #0095f6;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    align-items: center; 
+}
+
 h1 {
     text-align: center;
-    color: #ffcc00;
+    color: #fff;
+    margin: 10px;
 }
 
 .container {
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -29,7 +42,7 @@ h1 {
 img {
     max-width: 100%; /* 圖片自適應寬度 */
     height: auto; /* 高度自適應 */
-    max-height: 300px;
+    max-height: 200px;
 }
 
 .title {
@@ -43,16 +56,15 @@ img {
     display: flex; 
     align-items: center; 
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 .img-left {
     z-index: 10000;
     text-align: left; 
     width: 50%;
-
-    position: fixed;
-    bottom: 0;
-    left: 0;
     /* margin: 20px; */
     /* background-color: lightblue; */
     /* padding: 10px; */
@@ -62,11 +74,32 @@ img {
     z-index: 10000;
     text-align: right; 
     width: 50%;
-
-    position: fixed;
-    bottom: 0;
-    right: 0;
     /* margin: 20px; */
     /* background-color: lightgreen; */
     /* padding: 10px; */
+}
+
+
+
+/* 回到最上方按鈕的樣式 */
+#back-to-top {
+    display: none; /* 頁面加載時先隱藏 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #ffcc00;
+    color: white;
+    padding: 7px 10px 11px 10px;
+    border-radius: 50%; /* 確保圓形 */
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* 當滑動到一定位置，按鈕會顯示 */
+#back-to-top.show {
+    display: block;
 }
