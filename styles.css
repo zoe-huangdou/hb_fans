@@ -42,7 +42,7 @@ h1 {
 img {
     max-width: 100%; /* 圖片自適應寬度 */
     height: auto; /* 高度自適應 */
-    max-height: 260px;
+    max-height: 40vh; /* 最大高度為視窗高度的 40% */
 }
 
 .title {
