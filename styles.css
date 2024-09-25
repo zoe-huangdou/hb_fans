@@ -42,7 +42,7 @@ h1 {
 img {
     max-width: 100%; /* 圖片自適應寬度 */
     height: auto; /* 高度自適應 */
-    max-height: 200px;
+    max-height: 260px;
 }
 
 .title {
