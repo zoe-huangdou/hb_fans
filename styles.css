@@ -94,28 +94,29 @@ a:hover {
     font-weight: bold;
 }
 
-.img-group {
+
+
+.img-left {
     display: flex; 
-    align-items: center; 
-    width: 100%;
+    justify-content: left;
     position: fixed;
     bottom: 0;
     left: 0;
-}
-
-.img-left {
     z-index: 10000;
-    text-align: left; 
-    width: 50%;
+    width: 30%;
     /* margin: 20px; */
     /* background-color: lightblue; */
     /* padding: 10px; */
 }
 
 .img-right {
+    display: flex; 
+    justify-content: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
     z-index: 10000;
-    text-align: right; 
-    width: 50%;
+    width: 30%;
     /* margin: 20px; */
     /* background-color: lightgreen; */
     /* padding: 10px; */
