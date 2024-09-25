@@ -16,14 +16,13 @@ body {
     top: 0;
     left: 0;
     align-items: center; 
-}
-
-h1 {
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
     color: #fff;
-    margin: 10px;
+    margin: 0;
+    padding: 8px;
 }
-
 
 .footer {
     z-index: 10000;
@@ -32,16 +31,17 @@ h1 {
     width: 100%;
     bottom: 0;
     left: 0;
+    justify-content: center;
     align-items: center; 
     text-align: center;
     color: #cccccc;
     margin: 0;
     padding: 5px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
 }
