@@ -1,24 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fffbe6;
-    color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* 設定為整個視窗高度 */
+    background: linear-gradient(-30deg, #fcacd4, #c7f1ff); /* 粉紅色到粉藍色的漸層 */
+    background-attachment: fixed; /* 使背景固定 */
+    color: #333;
 }
-h1 {
+
+.header {
+    z-index: 10000;
+    background-color: #0095f6;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    align-items: center; 
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
-    color: #ffcc00;
+    color: #fff;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.footer {
+    z-index: 10000;
+    background-color: #333333;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    color: #cccccc;
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
 }
 
 .container {
+    justify-content: center;
+    margin-top: 70px;
+    padding-bottom: 80px;
     display: flex;
     flex-wrap: wrap;
 }
+
+.day-counter {
+    align-items: center; 
+    width: 200px;
+    text-align: center;
+    background-color: #ff9ccd;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 8px 5px;
+    box-shadow: 3px 3px 10px rgba(99, 99, 99, 0.5);
+}
+
 .item {
     width: calc(100% - 10px); /* 每個項目占一分之一的寬度，加上間距 */
     margin: 5px;
     box-sizing: border-box;
-    border: 1px solid #ccc; /* 加上邊框以示區分 */
+    /* border: 1px solid #ccc; */
     padding: 10px;
     display: flex; 
     justify-content: flex-start;
@@ -29,28 +75,38 @@ h1 {
 img {
     max-width: 100%; /* 圖片自適應寬度 */
     height: auto; /* 高度自適應 */
-    max-height: 300px;
+    max-height: 40vh; /* 最大高度為視窗高度的 40% */
+}
+
+a {
+    color: #ffcc00; /* 設定超鏈接顏色 */
+    text-decoration: none; /* 去掉下劃線 */
+}
+
+a:hover {
+    color: #0095f6; /* 滑鼠懸停時改變顏色 */
 }
 
 .title {
     font-size: 20px; 
     margin: 10px;
+    color: #0095f6;
+    font-weight: bold;
 }
 
 .img-group {
     display: flex; 
     align-items: center; 
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 .img-left {
     z-index: 10000;
     text-align: left; 
     width: 50%;
-
-    position: fixed;
-    bottom: 0;
-    left: 0;
     /* margin: 20px; */
     /* background-color: lightblue; */
     /* padding: 10px; */
@@ -60,11 +116,31 @@ img {
     z-index: 10000;
     text-align: right; 
     width: 50%;
-
-    position: fixed;
-    bottom: 0;
-    right: 0;
     /* margin: 20px; */
     /* background-color: lightgreen; */
     /* padding: 10px; */
+}
+
+/* 回到最上方按鈕的樣式 */
+#back-to-top {
+    display: none; /* 頁面加載時先隱藏 */
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 99;
+    background-color: #ffcc00;
+    color: white;
+    padding: 7px 10px 11px 10px;
+    border-radius: 50%; /* 確保圓形 */
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 3px 3px 10px rgba(99, 99, 99, 0.5);
+}
+
+/* 當滑動到一定位置，按鈕會顯示 */
+#back-to-top.show {
+    display: block;
 }

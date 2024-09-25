@@ -27,3 +27,4 @@ fetch('data.json')
         console.error('讀取檔案失敗:', error);
         document.getElementById('content').innerText = '無法讀取檔案';
     });
+
