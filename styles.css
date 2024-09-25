@@ -41,10 +41,24 @@ body {
 }
 
 .container {
-    margin-top: 40px;
+    justify-content: center;
+    margin-top: 70px;
     display: flex;
     flex-wrap: wrap;
 }
+
+.day-counter {
+    align-items: center; 
+    width: 200px;
+    text-align: center;
+    background-color: #ff9ccd;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 8px 5px;
+    box-shadow: 3px 3px 10px rgba(99, 99, 99, 0.5);
+}
+
 .item {
     width: calc(100% - 10px); /* 每個項目占一分之一的寬度，加上間距 */
     margin: 5px;
@@ -62,7 +76,6 @@ img {
     height: auto; /* 高度自適應 */
     max-height: 40vh; /* 最大高度為視窗高度的 40% */
 }
-
 
 a {
     color: #ffcc00; /* 設定超鏈接顏色 */
@@ -107,13 +120,11 @@ a:hover {
     /* padding: 10px; */
 }
 
-
-
 /* 回到最上方按鈕的樣式 */
 #back-to-top {
     display: none; /* 頁面加載時先隱藏 */
     position: fixed;
-    bottom: 40px;
+    bottom: 50px;
     right: 20px;
     z-index: 99;
     background-color: #ffcc00;
