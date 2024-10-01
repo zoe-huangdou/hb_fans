@@ -61,16 +61,25 @@ body {
 }
 
 .item {
-    width: calc(100% - 10px); /* 每個項目占一分之一的寬度，加上間距 */
+    width: calc(33% - 10px); /* 每個項目占三分之一的寬度，加上間距 */
+    height: calc(33% - 10px); /* 每個項目占三分之一的高度，加上間距 */
     margin: 5px;
     box-sizing: border-box;
     /* border: 1px solid #ccc; */
     padding: 10px;
     display: flex; 
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center; 
     flex-direction: column; 
     /* height: 100vh; */
+    
+}
+
+.item-embed {
+    width: 100px; /* 每個項目占三分之一的寬度，加上間距 */
+    height: 100px; /* 每個項目占三分之一的高度，加上間距 */
+    transform: scale(0.3); /* 50% 的縮放 */
+    transform-origin: top center; 
 }
 img {
     max-width: 100%; /* 圖片自適應寬度 */
