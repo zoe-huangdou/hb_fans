@@ -60,6 +60,8 @@ body {
     box-shadow: 3px 3px 10px rgba(99, 99, 99, 0.5);
 }
 
+
+
 .event {
     margin-top: 20px;
     align-items: center; 
@@ -151,6 +153,18 @@ a:hover {
     /* margin: 20px; */
     /* background-color: lightgreen; */
     /* padding: 10px; */
+}
+
+.button {
+    align-items: center; 
+    width: 80px;
+    text-align: center;
+    background-color: #57badb;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 8px 5px;
+    box-shadow: 3px 3px 10px rgba(99, 99, 99, 0.5);
 }
 
 /* 回到最上方按鈕的樣式 */
