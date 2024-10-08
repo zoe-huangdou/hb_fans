@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=3600, public">
+    <meta property="og:title" content="黃氏兄弟應援資訊">
+    <meta property="og:description" content="黃氏兄弟的觀眾應援資訊整理!!">
+    <meta property="og:image" content="https://zoe-huangdou.github.io/hb_fans/img/path-to-image.png">
+    <!-- <meta property="og:url" content="https://yourwebsite.com"> -->
+    <title>過往活動-黃氏兄弟應援資訊</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="header">過往活動-黃氏兄弟應援資訊</div>
+
+    <div class="img-left">
+        <img src="img/left.png" alt="zhe">
+    </div>
+    <div class="img-right">
+        <img src="img/right.png" alt="wei">
+    </div>
+
+    <div class="container" id="table-body">
+        
+        <div class="title">✨2024-10-06 活動應援✨</div>
+        <div class="item">
+            <div class="item-embed"  style="height: 180px;">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAI2vjLS4lT">
+                </blockquote>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-embed" style="height: 180px;">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAD9ap4y6Fb">
+                </blockquote>
+            </div>
+        </div>
+
+        <div style="width: 100%; display: flex; justify-content: right; margin-top: 20px; padding: 0 20px; color: #999;">Last Update: 2024/10/08</div>
+    </div>
+
+    <!-- 回到最上方按鈕 -->
+    <div id="back-to-top" onclick="scrollToTop()">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 20 70 L 50 40 L 80 70" fill="none" stroke="#ffffff" stroke-width="20" />
+        </svg>
+    </div>
+
+    <script>
+        // 監聽滾動事件，當頁面向下滾動時顯示按鈕
+        window.onscroll = function () {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add("show");
+            } else {
+                backToTopButton.classList.remove("show");
+            }
+        };
+
+        // 點擊按鈕時，滑動回到頂部
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <div class="footer">
+        本頁面由 Zoe Chen 製作與維護 <span style="color: #666; padding: 0 10px;"> | </span> IG : <a
+            href="https://www.instagram.com/zoe_huangdou">zoe_huangdou</a>
+    </div>
+
+    <!-- 把 JavaScript 放在 body 結束標籤前 -->
+    <script>
+        function calculateDaysLeft(targetDate) {
+        // 取得當前時間，並手動轉換為 UTC+8
+        const currentDate = new Date();
+        const utc8Offset = currentDate.getTimezoneOffset() + (8 * 60); // 取得 UTC+8 與當前時區的差異分鐘數
+        const currentDateUtc8 = new Date(currentDate.getTime() + utc8Offset * 60 * 1000); // 調整時間
+
+        const target = new Date(targetDate); // 目標日期
+        const timeDifference = target - currentDateUtc8; // 計算時間差
+        const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24)); // 換算為天數
+        return daysLeft;
+    }
+
+    function displayCountdown() {
+        const targetDate = "2024-10-08"; // 目標日期
+        const daysLeft = calculateDaysLeft(targetDate);
+        document.getElementById("countdown").textContent = daysLeft >= 0 ? daysLeft + " 天" : "已過期";
+    }
+
+        // 在 DOM 準備好後立刻執行倒數
+        displayCountdown();
+    </script>
+    <script async src="//www.instagram.com/embed.js"></script>
+</body>
+
+</html>
