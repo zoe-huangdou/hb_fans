@@ -27,14 +27,32 @@
 
     <div class="container" id="table-body">
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div class="day-counter" style="font-size: 24px;">
-                瑋瑋 生日快樂!!<br>2024 / 10 / 8
+            <div class="day-counter" style="font-size: 20px;">
+                10月是屬於瑋瑋的月份<br>瑋瑋 生日快樂!!<br>永遠18歲~~
                 <!-- <br><span style="font-size: 24px;">倒數 <span id="countdown"></span></span> -->
+            </div>
+        </div>
+
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <div class="event">
+                近期活動<br>
+                <ul>
+                    <li>10 / 18 (五) 18:00<br>台北時裝週SS25 (松山文創園區)</li>
+                    <li>10 / 19 (六) 09:30~15:00<br>北港溪溫泉嘉年華 (泰雅渡假村)</li>
+                    <li>10 / 26 (六) 時間未定<br>走鐘獎頒獎典禮 (台大體育館3F)</li>
+                </ul>
+
             </div>
         </div>
 
         <span class="title">❤️瑋瑋生日應援❤️</span>
 
+        <div class="item">
+            <div class="item-embed">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DA3MTohTOOL">
+                </blockquote>
+            </div>
+        </div>
         <div class="item">
             <div class="item-embed">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAyeJYPS1c1">
@@ -125,7 +143,7 @@
                 </blockquote>
             </div>
         </div>
-        
+
         <div class="item">
             <div class="item-embed">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAOAfFVPRC-">
@@ -174,32 +192,23 @@
                 </blockquote>
             </div>
         </div>
-        
+
         <div class="item">
             <div class="item-embed">
                 <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C_92ZmUyhIN">
                 </blockquote>
             </div>
         </div>
-        
 
         <div style="width: 100%; display: flex; justify-content: center;">
-            <div class="event">
-                近期活動<br>
-                <ul>
-                    <li>10 / 08 (二) 20:00<br>瑋瑋生日直播 (黃氏兄弟Youtube)</li>
-                    <li>10 / 19 (六) 9:30~15:00<br>北港溪溫泉嘉年華 (泰雅渡假村)</li>
-                    <li>10 / 26 (六) 時間未定<br>走鐘獎頒獎典禮 (台大體育館3F)</li>
-                </ul>
-                
+            <div class="button" style="margin-top: 20px; color: #fff">
+                <a href="finish.html">過往活動</a>
             </div>
         </div>
 
-        <div class="button" style="margin-top: 20px;">
-            <a href="finish.html">過往活動</a>
-        </div>
-
-        <div style="width: 100%; display: flex; justify-content: right; margin-top: 20px; padding: 0 20px; color: #999;">Last Update: 2024/10/08</div>
+        <div
+            style="width: 100%; display: flex; justify-content: right; margin-top: 20px; padding: 0 20px; color: #999;">
+            Last Update: 2024/10/08</div>
     </div>
 
     <!-- 回到最上方按鈕 -->
@@ -234,22 +243,22 @@
     <!-- 把 JavaScript 放在 body 結束標籤前 -->
     <script>
         function calculateDaysLeft(targetDate) {
-        // 取得當前時間，並手動轉換為 UTC+8
-        const currentDate = new Date();
-        const utc8Offset = currentDate.getTimezoneOffset() + (8 * 60); // 取得 UTC+8 與當前時區的差異分鐘數
-        const currentDateUtc8 = new Date(currentDate.getTime() + utc8Offset * 60 * 1000); // 調整時間
+            // 取得當前時間，並手動轉換為 UTC+8
+            const currentDate = new Date();
+            const utc8Offset = currentDate.getTimezoneOffset() + (8 * 60); // 取得 UTC+8 與當前時區的差異分鐘數
+            const currentDateUtc8 = new Date(currentDate.getTime() + utc8Offset * 60 * 1000); // 調整時間
 
-        const target = new Date(targetDate); // 目標日期
-        const timeDifference = target - currentDateUtc8; // 計算時間差
-        const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24)); // 換算為天數
-        return daysLeft;
-    }
+            const target = new Date(targetDate); // 目標日期
+            const timeDifference = target - currentDateUtc8; // 計算時間差
+            const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24)); // 換算為天數
+            return daysLeft;
+        }
 
-    function displayCountdown() {
-        const targetDate = "2024-10-08"; // 目標日期
-        const daysLeft = calculateDaysLeft(targetDate);
-        document.getElementById("countdown").textContent = daysLeft >= 0 ? daysLeft + " 天" : "已過期";
-    }
+        function displayCountdown() {
+            const targetDate = "2024-10-08"; // 目標日期
+            const daysLeft = calculateDaysLeft(targetDate);
+            document.getElementById("countdown").textContent = daysLeft >= 0 ? daysLeft + " 天" : "已過期";
+        }
 
         // 在 DOM 準備好後立刻執行倒數
         displayCountdown();
