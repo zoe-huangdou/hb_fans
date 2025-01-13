@@ -52,15 +52,13 @@ body {
     align-items: center; 
     width: 240px;
     text-align: center;
-    background-color: #ff9ccd;
-    color: #fff;
+    background-color: #fff09e;
+    color: #2587a8;
     font-weight: bold;
     border-radius: 12px;
     padding: 8px 5px;
     box-shadow: 3px 3px 10px rgba(99, 99, 99, 0.5);
 }
-
-
 
 .event {
     margin-top: 20px;
@@ -72,7 +70,7 @@ body {
     font-weight: bold;
     border-radius: 50px;
     font-size: 14px;
-    padding: 12px 6px;
+    padding: 16px 8px;
     box-shadow: 3px 3px 10px rgba(99, 99, 99, 0.5);
 }
 ul {
@@ -149,7 +147,7 @@ a:hover {
     bottom: 0;
     right: 0;
     z-index: 10000;
-    width: 0%;
+    width: 50%;
     /* margin: 20px; */
     /* background-color: lightgreen; */
     /* padding: 10px; */
